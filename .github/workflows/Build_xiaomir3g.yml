@@ -1,4 +1,4 @@
-name: Build HiWiFi_4
+name: Build xiaomir3g
 
 on:
   release:
