@@ -4,8 +4,8 @@
 # 删除一些配置
 # sed -i '/shadow/d' package/lean/default-settings/files/zzz-default-settings
 # 修改默认登陆IP地址
-# sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168/10.8/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
+# sed -i 's/192.168/10.8/g' package/base-files/files/bin/config_generate
 # 设置主机名称
 sed -i 's/OpenWrt/danxiaonuo/g' package/base-files/files/bin/config_generate
 # sed -i '/uci commit system/i\uci set system.@system[0].hostname='danxiaonuo'' package/lean/default-settings/files/zzz-default-settings
