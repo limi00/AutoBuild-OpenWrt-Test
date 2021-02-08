@@ -7,7 +7,7 @@
 sed -i 's/192.168.1.1/192.168.31.1/g' package/base-files/files/bin/config_generate
 # sed -i 's/192.168/10.8/g' package/base-files/files/bin/config_generate
 # 设置主机名称
-sed -i 's/OpenWrt/danxiaonuo/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/XiaomiR3G/g' package/base-files/files/bin/config_generate
 # sed -i '/uci commit system/i\uci set system.@system[0].hostname='danxiaonuo'' package/lean/default-settings/files/zzz-default-settings
 # 设置时区
 # sed -i 's/UTC/CST-8/g' package/base-files/files/bin/config_generate
@@ -44,7 +44,8 @@ sed -i '/exit 0/i\# 启动WIFI\nnohup sleep 60 && /sbin/wifi up &' package/base-
 # echo "src-git lienol https://github.com/chenshuo890/lienol-openwrt-package.git" >> feeds.conf.default
 
 # 增加openwet常用软件包
-# git clone https://github.com/kenzok8/openwrt-packages.git package/mine/
+git clone https://github.com/openwrt/luci.git applications/
+git clone https://github.com/openwrt/packages packages/
 
 # 更改默认主题为Argon
 rm -rf package/lean/luci-theme-argon
@@ -52,7 +53,7 @@ sed -i '/uci commit luci/i\uci set luci.main.mediaurlbase="/luci-static/argon"' 
 git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon
 
 # 复杂的AdGuardHome的openwrt的luci界面
-git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/mine/luci-app-adguardhome
+# git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/mine/luci-app-adguardhome
 
 # DiskMan for LuCI (WIP)
 # git clone https://github.com/lisaac/luci-app-diskman.git package/mine/luci-app-diskman
