@@ -25,16 +25,11 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    if: github.event.repository.owner.id == github.event.sender.id
-    
-    steps:
-    - name: Get build date
-      id: date
-      run: echo "::set-output name=date::$(date +'%Y%m%d%H%M%S')"
+    runs-on: ubuntu-18.04
 
+    steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@main
 
     - name: Initialization environment
       env:
